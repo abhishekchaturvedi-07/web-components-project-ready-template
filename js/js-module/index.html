@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <style>
+      my-panel {
+        --my-panel-primary-bg: lightgreen;
+        --my-panel-primary-color: #222;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Hello JS!</h1>
+      <script type="module">
+        import "my-panel-07";
+      </script>
+      <my-panel title="NEW Accorddian" icon="💝"
+        ><button>Click Me</button></my-panel
+      >
+      <script>
+        const el = document.querySelector("my-panel");
+        el.addEventListener("icon-click", function () {
+          alert("Clicked");
+        });
+      </script>
+    </div>
+  </body>
+</html>

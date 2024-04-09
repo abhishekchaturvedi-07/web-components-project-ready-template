@@ -16,12 +16,11 @@ export class myPanel extends LitElement {
         background: var(--my-panel-primary-bg, brown);
         color: var(--my-panel-primary-color, yellow);
         padding: 0.8rem;
-        
-        border-radius: 1rem 1rem 0 0;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        transition: all 0.2s ease-in-out;
     }
     .title.closed{
         border-bottom-left-radius: 1rem;
@@ -70,7 +69,26 @@ export class myPanel extends LitElement {
         )
             }
         </div>
-         
+        ${when
+                (
+                    this.opened,
+                    () => html`
+                    <div class="panel-container">
+                        <div class="title">
+                            ${this.title}   
+                            <div>
+                                🌟
+                            </div>
+                        </div>
+                        <div class="body"> 
+                            ${this.message}
+                            <slot></slot>
+                        </div>
+                    </div>
+                    `,
+                    () => html``
+                )
+            }
             
         `
     }

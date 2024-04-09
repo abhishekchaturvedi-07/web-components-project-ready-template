@@ -1,18 +1,21 @@
 {
-  "name": "my-panel",
+  "name": "my-panel-07",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.1.2",
   "main": "dist/my-panel.js",
   "exports": {
     ".": "./dist/my-panel.js"
   },
   "type": "module",
-  "homepage":"https://github.com/abhishekchaturvedi-07",
+  "homepage": "https://github.com/abhishekchaturvedi-07",
   "types": "types/my-panel.d.ts",
   "files": [
     "dist",
     "types"
   ],
+  "repository": {
+    "url": "git+https://github.com/abhishekchaturvedi-07/web-components-project-ready-template.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
