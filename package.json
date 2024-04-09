@@ -1,0 +1,36 @@
+{
+  "name": "my-panel",
+  "private": false,
+  "version": "0.1.0",
+  "main": "dist/my-panel.js",
+  "exports": {
+    ".": "./dist/my-panel.js"
+  },
+  "type": "module",
+  "homepage":"https://github.com/abhishekchaturvedi-07",
+  "types": "types/my-panel.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lit": "^3.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  },
+  "keywords": [
+    "webcomponent",
+    "javascript",
+    "react",
+    "vue",
+    "angular"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <link rel="stylesheet" href="./src/index.css" />
+    <script type="module" src="./src/my-panel.ts"></script>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        margin: 5rem;
+      }
+      my-panel {
+        --my-panel-primary-bg: red;
+        --my-panel-primary-color: #fff;
+        margin: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <my-panel title="Accordion" opened icon="⬇️">
+        ABCD ABCD ABCD ABCD ABCDABCD ABCD ABCD ABCD ABCDABCD ABCD ABCD ABCD ABCD
+      </my-panel>
+
+      <!-- When directive like if else -->
+      <!-- <my-panel title="Next Panel" opened>
+        <form>
+          <input type="text" placeholder="Hello!" />
+          <button>Click!</button>
+        </form>
+      </my-panel> -->
+
+      <script>
+        const attachClickEvent = document.querySelector("my-panel");
+        attachClickEvent.addEventListener("icon-click", () =>
+          console.log("Icon Clicked")
+        );
+      </script>
+    </div>
+  </body>
+</html>
